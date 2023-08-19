@@ -380,6 +380,7 @@
     padding-top: 32px;
     padding-bottom: 24px;
 
+
     @include media-breakpoint-up(md) {
         padding-top: 60px;
         padding-bottom: 60px;
@@ -419,6 +420,16 @@
         &:hover {
             border-radius: 10px;
             box-shadow: inset 5px -5px 5px 5px gray;
+        }
+    }
+
+    .follow-effect {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        @include media-breakpoint-up(md) {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
