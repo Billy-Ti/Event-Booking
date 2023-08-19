@@ -1,0 +1,59 @@
+.header {
+    border-bottom: 3px solid $black-color;
+    padding: 16px 12px;
+
+    @include media-breakpoint-up(md) {
+        padding: 24px 12px;
+    }
+}
+
+.container {
+    max-width: 1296px;
+}
+
+.header-logo {
+    width: 53px;
+    height: 53px;
+}
+
+.register,
+.login {
+    a {
+        color: black;
+        transition: all .5s;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+}
+
+// button style 
+.btn-search {
+    width: 51px;
+    height: 59px;
+    background-color: $black-color;
+    color: #fff;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        --bs-btn-hover-border-color: $black-color;
+        background-color: $black-color;
+    }
+
+    &:hover .search-icon {
+        color: $btn-hover;
+    }
+
+    .search-icon {
+        line-height: 1.5;
+    }
+}
+
+.header-form {
+    max-width: 305px;
+}
+
+.header-input {
+    border: 2px solid $black-color;
+}

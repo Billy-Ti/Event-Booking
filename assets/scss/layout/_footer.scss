@@ -1,0 +1,15 @@
+.footer {
+    border-bottom: 3px solid $black-color;
+}
+
+.footer-copyright {
+    color: $black-color;
+    padding: 32px 0;
+}
+
+@media screen and (max-width: 576px) {
+    .footer-copyright {
+        padding: 24px 0;
+        font-size: 14px;
+    }
+}

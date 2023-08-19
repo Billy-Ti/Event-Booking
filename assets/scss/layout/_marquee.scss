@@ -1,0 +1,24 @@
+// swiper
+.swiper-effect {
+    font-size: 32px;
+
+    .swiper-wrapper {
+        color: $btn-hover;
+        transition-timing-function: linear;
+    }
+
+    .swiper-effect-txt {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        letter-spacing: 3.2px;
+        // width: auto;
+        background: #000;
+        white-space: nowrap;
+
+        @include media-breakpoint-up(md) {
+            font-size: 32px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+    }
+}

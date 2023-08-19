@@ -1,0 +1,28 @@
+.loginPage {
+    margin-top: 24px;
+    height: calc(100vh - 107.2px - 89.6px);
+
+    &-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    &-title {
+        font-size: 24px;
+        letter-spacing: 1.2px;
+    }
+
+    .btn-login {
+        color: #fff;
+        transition: all .3s;
+
+        &:hover {
+            color: $btn-hover;
+        }
+    }
+
+
+    @include media-breakpoint-up(md) {
+        margin-top: 60px;
+    }
+}

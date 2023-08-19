@@ -1,0 +1,449 @@
+// banner
+.banner {
+    position: relative;
+
+    img {
+        height: 518px;
+        object-fit: cover;
+    }
+
+    .banner-date {
+        margin-bottom: 200px;
+        @include font-size(3.75rem);
+    }
+
+    @media screen and (max-width: 991px) {
+        .banner-date {
+            margin-bottom: 280px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .banner-date {
+            margin-bottom: 300px;
+        }
+    }
+
+    .description-content {
+        padding: 0 232px;
+    }
+
+    .banner-description {
+        position: absolute;
+        top: 0;
+    }
+
+    // 客製化間距
+    @media screen and (max-width: 991px) {
+        .description-content {
+            padding: 0 116px;
+        }
+    }
+}
+
+// menu list
+.menu-pic {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+    transition: all .5s;
+
+    @include media-breakpoint-up(md) {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.menu-area {
+    color: $black-color;
+    transition: all .5s;
+
+    &:hover {
+        color: #00f5a2;
+    }
+
+    &:hover .menu-pic {
+        filter: invert(70%) sepia(79%) saturate(1322%) hue-rotate(103deg) brightness(98%) contrast(101%);
+    }
+}
+
+.menu-btn {
+    padding: 0;
+    background-color: #000;
+    transition: all .5s;
+    color: $btn-hover;
+
+    &:hover {
+        color: #00f5a2;
+    }
+}
+
+// recent-activity 
+.recent-content,
+.online-content {
+    border: 3px solid $black-color;
+}
+
+.recent-title,
+.online-title {
+    color: $black-color;
+}
+
+@media screen and (min-width: 375px) {
+
+    .recent-content,
+    .online-content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .recent-title,
+    .online-title {
+        font-size: 24px;
+    }
+
+    .recent-paragraph,
+    .online-paragraph {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+
+    .recent-content,
+    .online-content {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .recent-title,
+    .online-title {
+        font-size: 64px;
+    }
+
+    .recent-paragraph,
+    .online-paragraph {
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+
+// customer card
+
+.customer-card {
+    background-color: #F3F1E5;
+
+    .card,
+    img {
+
+        border-radius: 0;
+    }
+
+    h3 {
+        color: $black-color;
+    }
+
+    .card {
+        width: 100%;
+        --bs-card-bg: #F3F1E5;
+        border: 0;
+
+        &-body {
+            border-bottom: 2px solid $black-color;
+            padding: 0;
+        }
+
+        &-text {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid $black-color;
+            flex-grow: 1;
+        }
+
+        &-img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        &-title {
+            padding-top: 12px;
+        }
+
+
+        &-footer-area {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .card-arrow-icon {
+            font-size: 16px;
+        }
+    }
+
+    .customer-date {
+        padding-bottom: 12px;
+        border-bottom: 3px solid $black-color;
+        margin-bottom: 12px;
+        @include font-size(3rem);
+    }
+
+    .card-link {
+        color: #000;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .link-type:hover {
+        font-weight: 700;
+        color: $hover-color;
+    }
+
+    .card-link {
+        position: relative;
+        display: inline-block;
+    }
+
+    .link-check {
+        position: absolute;
+        right: 52px;
+        z-index: 99;
+    }
+
+    .link-check-1 {
+        position: absolute;
+        right: 68px;
+        z-index: 99;
+    }
+
+    .link-check-1::before {
+        content: "";
+        width: 29px;
+        height: 29px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 1px;
+        z-index: -1;
+        left: -15px;
+        background-color: $btn-hover;
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity 0.3s ease, transform 0.3s ease
+    }
+
+    .card-link:hover .link-check-1::before {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .link-check::before {
+        content: "";
+        width: 29px;
+        height: 29px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 1px;
+        z-index: -1;
+        left: -15px;
+        background-color: $btn-hover;
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .card-link:hover .link-check::before {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .link-text {
+        margin-left: -4px;
+        vertical-align: top;
+    }
+}
+
+// online
+
+.online-block {
+    margin-top: 32px;
+
+    margin-bottom: 32px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 60px;
+    }
+}
+
+.online-pic {
+    background-image: url('/assets/images/2023week6/event/online.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 160px;
+
+    @include media-breakpoint-up(md) {
+        height: 100%;
+    }
+}
+
+.online-description {
+    a {
+        color: $black-color;
+        padding: 4px 24px;
+        border-bottom: 1px solid $black-color;
+        border-right: 1px solid $black-color;
+        border-top: 1px solid $black-color;
+        border-left: 4px solid $black-color;
+        transition: all .3s;
+
+        &:hover {
+            color: #fff;
+            background-color: $black-color;
+            border-left: 4px solid $btn-hover;
+        }
+    }
+
+    .online-tag {
+        margin-bottom: 12px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .online-txt {
+        margin-bottom: 28px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 40px;
+        }
+    }
+
+
+    // .online-button{
+    //     margin-bottom: 32px;
+    //     @include media-breakpoint-up(md) {
+    //         margin-bottom: 0;
+    //     }
+    // }
+
+    .online-button:hover a {
+        color: $btn-hover;
+    }
+}
+
+// album
+.album {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &-card {
+        border-color: $black-color;
+    }
+
+    &-tag {
+        transform: translate(-50%, -50%) rotate(4deg);
+    }
+
+    &-pic {
+        height: 267px;
+        object-fit: cover;
+
+        @include media-breakpoint-up(sm) {
+            height: 274px;
+
+        }
+    }
+
+    &-cursor {
+        cursor: pointer;
+    }
+
+    .rotate-art {
+        transform: rotate(-2deg);
+    }
+
+    .rotate-fellowship {
+        transform: rotate(2deg);
+    }
+}
+
+
+// follow us
+.follow-us {
+    padding-top: 32px;
+    padding-bottom: 24px;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .follow-title {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-right: 32px;
+        padding-left: 32px;
+        color: $black-color;
+    }
+
+    .follow-contact,
+    .subscribe-content {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-right: 12px;
+        padding-left: 12px;
+
+        @include media-breakpoint-up(md) {
+            padding: 32px;
+        }
+    }
+
+    .follow-txt {
+        margin-bottom: 24px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 36px;
+        }
+    }
+
+    .follow-link-effect {
+        transition: all .8s;
+
+        &:hover {
+            border-radius: 10px;
+            box-shadow: inset 5px -5px 5px 5px gray;
+        }
+    }
+
+}
+
+// subscribe us
+
+
+.btn-confirm {
+    color: #fff;
+    transition: all .3s;
+
+    &:hover {
+        color: $btn-hover;
+    }
+}
+
+.subscribe-txt {
+    margin-bottom: 16px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 32px;
+    }
+}
+
+.subscribe-input {
+    padding: 16px 24px;
+}

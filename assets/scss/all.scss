@@ -1,0 +1,23 @@
+// 載入 Bootstrap 檔案
+@import "/node_modules/bootstrap/scss/bootstrap";
+
+// 載入 icon 檔案，此 icon 需先將 icon 加入收藏後再下載檔案引入
+@import "../icofont/icofont.min.css";
+
+// 載入自定義通用設定 --->
+@import "./base/base";
+@import "./utils/global";
+@import "./base/variable";
+
+// 載入自定義樣式的斷點檔，需在 utilities/api 檔之前引入
+@import "./utils/custom_bs_utilities";
+
+// Bootstrap 必加檔案
+@import "/node_modules/bootstrap/scss/utilities/api";
+
+// 各分頁自定義樣式檔
+@import "./layout/header";
+@import "./layout/footer";
+@import "./pages/index";
+@import "./layout/marquee";
+@import "./layout/login";
