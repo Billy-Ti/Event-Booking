@@ -10,3 +10,37 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 
 
+// 登入頁表單驗證
+
+// 每個有 .needs-validation 的 <form> 元素，觸發 submit 事件時，
+// 將該元素加入 class 'was-validated'
+$('.needs-validation').each(function (index) {
+    $(this).on('submit', function (e) {
+        e.preventDefault();
+        $(this).addClass('was-validated');
+    });
+});
+
+// $(document).ready(function () {
+//     alert('hello');
+// });
+
+// bsFormValidation();
+
+// function bsFormValidation() {
+//     const validation = document.querySelectorAll(".needs-validation");
+
+//     console.log(validation);
+//     validation.forEach((form) => {
+//         form.addEventListener("submit", (e) => {
+//             if (!e.target.checkValidity()) {
+//                 e.preventDefault();
+//                 e.stopPropagation();
+//             }
+
+//             e.target.classList.add("was-validated");
+//         });
+//     });
+// }
+
+
