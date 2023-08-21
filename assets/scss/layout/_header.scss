@@ -1,6 +1,7 @@
 .header {
     border-bottom: 3px solid $black-color;
     padding: 16px 12px;
+    background-color: #F3F1E5;
 
     @include media-breakpoint-up(md) {
         padding: 24px 12px;

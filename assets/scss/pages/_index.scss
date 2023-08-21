@@ -1,6 +1,7 @@
 // banner
 .banner {
     position: relative;
+    background-color: #F3F1E5;
 
     img {
         height: 518px;
@@ -80,6 +81,10 @@
 }
 
 // recent-activity 
+.recent-activity {
+    background-color: #F3F1E5;
+}
+
 .recent-content,
 .online-content {
     border: 3px solid $black-color;
@@ -324,14 +329,6 @@
             margin-bottom: 40px;
         }
     }
-
-
-    // .online-button{
-    //     margin-bottom: 32px;
-    //     @include media-breakpoint-up(md) {
-    //         margin-bottom: 0;
-    //     }
-    // }
 
     .online-button:hover a {
         color: $btn-hover;

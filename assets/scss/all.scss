@@ -1,6 +1,4 @@
-// 載入 Bootstrap 檔案
-@import "/node_modules/bootstrap/scss/bootstrap";
-
+@import "/node_modules/bootstrap/scss/functions";
 // 載入 icon 檔案，此 icon 需先將 icon 加入收藏後再下載檔案引入
 @import "../icofont/icofont.min.css";
 
@@ -8,6 +6,9 @@
 @import "./base/base";
 @import "./utils/global";
 @import "./base/variable";
+@import "./base/custom_bs_variables";
+// 載入 Bootstrap 檔案
+@import "/node_modules/bootstrap/scss/bootstrap";
 
 // 載入自定義樣式的斷點檔，需在 utilities/api 檔之前引入
 @import "./utils/custom_bs_utilities";
